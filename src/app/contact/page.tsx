@@ -19,9 +19,9 @@ export default function ContactPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: contactPage.title, path: "/contact" }])) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqJsonLd) }} />
-      <PageHero variant="editorial" eyebrow={hero.eyebrow} title={hero.title} intro={hero.intro} />
+      <PageHero eyebrow={hero.eyebrow} title={hero.title} intro={hero.intro} image="meditationHallAerialFlag" imageAlt="Aerial view of the Kanha Shanti Vanam meditation hall complex with the Indian flag" size="md" video />
 
-      <section className="container-x -mt-6 pb-20 lg:pb-28">
+      <section className="container-x py-20 lg:py-28">
         <Stagger className="grid gap-5 md:grid-cols-3">
           {channels.map((c) => (
             <StaggerItem key={c.title} className="card p-7">

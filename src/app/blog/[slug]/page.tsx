@@ -4,9 +4,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { NewsCard } from "@/components/sections/Cards";
 import { SectionHeading, Prose } from "@/components/ui/Typography";
 import { ButtonLink, ArrowLink } from "@/components/ui/Button";
-import { Picture } from "@/components/ui/Picture";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
-import { MaskReveal } from "@/components/motion/Parallax";
 import { getPost, newsPosts, relatedPosts } from "@/content/news";
 import { img } from "@/assets/registry";
 import { buildMetadata, breadcrumbJsonLd, serializeJsonLd, absoluteUrl, organizationId } from "@/lib/seo";
@@ -32,10 +30,9 @@ export default async function NewsArticle({ params }: PageProps<"/blog/[slug]">)
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd(crumbs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} />
-      <PageHero variant="editorial" eyebrow={post.category} title={post.title} crumbs={crumbs.slice(0, 2)} />
+      <PageHero eyebrow={post.category} title={post.title} image={post.heroImage} imageAlt={post.heroAlt} crumbs={crumbs.slice(0, 2)} size="md" />
       <article className="container-x pb-24 lg:pb-32">
-        <MaskReveal className="rounded-3xl"><Picture src={post.heroImage} alt={post.heroAlt} ratio="aspect-[21/9]" sizes="100vw" priority /></MaskReveal>
-        <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="mt-16 grid gap-12 lg:grid-cols-12 lg:gap-16">
           <aside className="lg:col-span-3">
             <Reveal>
               <dl className="divide-y divide-sand-300 border-y border-sand-300 text-sm">

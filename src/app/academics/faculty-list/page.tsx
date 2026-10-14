@@ -16,10 +16,10 @@ export default function FacultyListPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd(crumbs)) }} />
-      <PageHero variant="editorial" eyebrow={facultyPage.hero.eyebrow} title={facultyPage.hero.title} intro={facultyPage.hero.intro} crumbs={crumbs}>
+      <PageHero eyebrow={facultyPage.hero.eyebrow} title={facultyPage.hero.title} intro={facultyPage.hero.intro} image="facultyTeachingPlantSpecimen" imageAlt="A HARI faculty member teaching students with a plant specimen" size="md" crumbs={crumbs}>
         <div className="flex flex-wrap gap-3">
-          <ButtonLink href="#faculty-details" variant="ink">Faculty Details</ButtonLink>
-          <ButtonLink href="#guest-faculty" variant="outline">Guest Faculty</ButtonLink>
+          <ButtonLink href="#faculty-details" variant="primary">Faculty Details</ButtonLink>
+          <ButtonLink href="#guest-faculty" variant="outline-light">Guest Faculty</ButtonLink>
         </div>
       </PageHero>
 

@@ -16,7 +16,7 @@ export default function ManagementPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Management", path: "/management" }])) }} />
-      <PageHero variant="editorial" eyebrow={hero.eyebrow} title={hero.title} intro={hero.intro} crumbs={[{ name: "Home", path: "/" }, { name: "Management", path: "/management" }]} />
+      <PageHero eyebrow={hero.eyebrow} title={hero.title} intro={hero.intro} image="auditoriumGatheringC" imageAlt="A gathering in the campus auditorium at Kanha Shanti Vanam" size="md" video crumbs={[{ name: "Home", path: "/" }, { name: "Management", path: "/management" }]} />
 
       <section className="container-x py-20 lg:py-28">
         <Stagger className="grid gap-8 md:grid-cols-3">

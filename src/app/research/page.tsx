@@ -19,7 +19,7 @@ export default function ResearchPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: researchPage.title, path: "/research" }])) }} />
-      <PageHero eyebrow={hero.eyebrow} title={hero.title} image={hero.image} imageAlt="Aerial view of the tree-lined Kanha Shanti Vanam campus" stats={hero.stats} />
+      <PageHero eyebrow={hero.eyebrow} title={hero.title} image={hero.image} imageAlt="Aerial view of the tree-lined Kanha Shanti Vanam campus" stats={hero.stats} video />
 
       <section className="container-x py-24 lg:py-32">
         <div className="mx-auto max-w-4xl text-center">

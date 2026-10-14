@@ -20,7 +20,7 @@ export default function AboutPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: aboutPage.title, path: "/about" }])) }} />
-      <PageHero eyebrow={hero.eyebrow} title={hero.title} image={hero.image} imageAlt={hero.imageAlt} />
+      <PageHero eyebrow={hero.eyebrow} title={hero.title} image={hero.image} imageAlt={hero.imageAlt} video />
 
       <section className="container-x py-24 lg:py-32">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">

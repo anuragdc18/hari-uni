@@ -47,7 +47,7 @@ export default function EventsPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: eventsPage.title, path: "/events" }])) }} />
-      <PageHero eyebrow={hero.eyebrow} title={hero.title} intro="Upcoming HARI University events, seminars, student activities and campus programmes at Kanha Shanti Vanam, Hyderabad." image={hero.image} imageAlt={hero.imageAlt} size="md" />
+      <PageHero eyebrow={hero.eyebrow} title={hero.title} intro="Upcoming HARI University events, seminars, student activities and campus programmes at Kanha Shanti Vanam, Hyderabad." image={hero.image} imageAlt={hero.imageAlt} size="md" video />
       <div className="bg-sand-100 pt-8">
         <Featured data={featuredOrientation} />
         <Featured data={featuredUdaan} reverse />

@@ -18,7 +18,7 @@ export default function CampusPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: campusPage.title, path: "/campus" }])) }} />
-      <PageHero eyebrow={hero.eyebrow} title={hero.title} intro={hero.intro} image={hero.image} imageAlt={hero.imageAlt} />
+      <PageHero eyebrow={hero.eyebrow} title={hero.title} intro={hero.intro} image={hero.image} imageAlt={hero.imageAlt} video />
 
       <section className="container-x py-24 lg:py-32">
         <SectionHeading eyebrow={glance.eyebrow} title={glance.title} size="lg" />

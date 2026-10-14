@@ -28,7 +28,7 @@ export default function ViceChancellorPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd(crumbs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(personJsonLd) }} />
-      <PageHero variant="editorial" eyebrow={vc.hero.eyebrow} title={vc.hero.title} intro={vc.hero.intro} crumbs={crumbs} />
+      <PageHero eyebrow={vc.hero.eyebrow} title={vc.hero.title} intro={vc.hero.intro} image="academicBuildingBrickGlassB" imageAlt="An academic building in terracotta brick and glass at Kanha Shanti Vanam" size="md" crumbs={crumbs} />
 
       <section className="container-x py-20 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">

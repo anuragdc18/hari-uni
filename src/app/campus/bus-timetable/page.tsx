@@ -17,9 +17,9 @@ export default function BusTimetablePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd(crumbs)) }} />
-      <PageHero variant="editorial" eyebrow={busPage.hero.eyebrow} title={busPage.hero.title} intro={busPage.hero.intro} crumbs={crumbs}>
+      <PageHero eyebrow={busPage.hero.eyebrow} title={busPage.hero.title} intro={busPage.hero.intro} image="campusAerialAvenueD" imageAlt="Aerial view of the tree-lined avenue into the Kanha Shanti Vanam campus" size="md" crumbs={crumbs}>
         <div className="flex flex-wrap gap-3">
-          {busPage.hero.links.map((l, i) => <ButtonLink key={l.href} href={l.href} variant={i ? "outline" : "ink"}>{l.label}</ButtonLink>)}
+          {busPage.hero.links.map((l, i) => <ButtonLink key={l.href} href={l.href} variant={i ? "outline-light" : "primary"}>{l.label}</ButtonLink>)}
         </div>
       </PageHero>
       <section className="container-x py-16 lg:py-20"><StatGrid stats={busPage.stats} /></section>

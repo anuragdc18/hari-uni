@@ -8,6 +8,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { StatRow } from "@/components/ui/Stats";
 import { cn } from "@/lib/utils";
 import type { Stat } from "@/components/ui/Stats";
+import { VideoBackground } from "./VideoBackground";
 
 interface PageHeroProps {
   eyebrow?: string;
@@ -22,10 +23,12 @@ interface PageHeroProps {
   variant?: "cinematic" | "editorial";
   size?: "lg" | "md";
   position?: string;
+  /** Play the HARI campus hero video over the photograph. */
+  video?: boolean;
 }
 
 /** Shared page hero. Cinematic variant marks itself so the header turns transparent over it. */
-export function PageHero({ eyebrow, title, intro, image, imageAlt = "", crumbs, stats, children, variant = "cinematic", size = "lg", position }: PageHeroProps) {
+export function PageHero({ eyebrow, title, intro, image, imageAlt = "", crumbs, stats, children, variant = "cinematic", size = "lg", position, video }: PageHeroProps) {
   if (variant === "editorial" || !image) {
     return (
       <section className="relative overflow-hidden bg-sand-100 pt-[calc(var(--header-height)+3rem)] pb-16 lg:pt-[calc(var(--header-height)+5rem)] lg:pb-24">
@@ -52,7 +55,10 @@ export function PageHero({ eyebrow, title, intro, image, imageAlt = "", crumbs, 
 
   return (
     <section data-header-tone="dark" className={cn("relative isolate flex items-end overflow-hidden text-white", size === "lg" ? "min-h-[82svh] lg:min-h-[88svh]" : "min-h-[62svh]")}>
-      <Picture src={image} alt={imageAlt} className="absolute inset-0 -z-20" sizes="100vw" priority quality={75} position={position} />
+      <div className="absolute inset-0 -z-20">
+        <Picture src={image} alt={imageAlt} className="absolute inset-0" sizes="100vw" priority quality={75} position={position} />
+        {video && <VideoBackground />}
+      </div>
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-t from-ink-950/95 via-ink-950/45 to-ink-950/25" />
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-ink-950/80 to-transparent" />
       <div className="container-x relative pb-14 pt-[calc(var(--header-height)+5rem)] lg:pb-20">
