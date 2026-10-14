@@ -8,6 +8,7 @@ import { Accordion } from "@/components/ui/Accordion";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { contactPage, faqs } from "@/content/contact";
 import { contact } from "@/content/site";
+import { IconTile } from "@/components/ui/Icon";
 import { buildMetadata, breadcrumbJsonLd, serializeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({ title: contactPage.title, description: contactPage.description, path: "/contact" });
@@ -25,6 +26,7 @@ export default function ContactPage() {
         <Stagger className="grid gap-5 md:grid-cols-3">
           {channels.map((c) => (
             <StaggerItem key={c.title} className="card p-7">
+              <IconTile name={c.title === "Admissions" ? "send" : c.title.startsWith("Research") ? "flask" : "news"} tone="terracotta" className="mb-4" />
               <h2 className="font-display text-xl">{c.title}</h2>
               {"phones" in c && c.phones && <p className="mt-3 flex flex-col text-sm">{c.phones.map((p) => <a key={p.tel} href={`tel:${p.tel}`} className="font-semibold text-ink-900 hover:underline">{p.display}</a>)}</p>}
               <a href={`mailto:${c.email}`} className="mt-3 block text-sm font-semibold text-terracotta-700 hover:underline">{c.email}</a>

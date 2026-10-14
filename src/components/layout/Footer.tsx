@@ -2,6 +2,7 @@ import Link from "next/link";
 import { contact, copyright, footerColumns, site } from "@/content/site";
 import { Logo } from "./Logo";
 import { isExternal } from "@/lib/utils";
+import { Icon } from "@/components/ui/Icon";
 
 export function Footer() {
   return (
@@ -13,11 +14,11 @@ export function Footer() {
             <Logo tone="light" />
             <dl className="mt-8 grid gap-6 text-sm sm:grid-cols-2">
               <div className="sm:col-span-2">
-                <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-500">{contact.campusOfficeLabel}</dt>
+                <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold-500"><Icon name="map" className="h-4 w-4" />{contact.campusOfficeLabel}</dt>
                 <dd className="mt-2 max-w-sm leading-relaxed text-sand-200/85">{contact.addressLine}</dd>
               </div>
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-500">Email</dt>
+                <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold-500"><Icon name="mail" className="h-4 w-4" />Email</dt>
                 <dd className="mt-2">
                   <a href={`mailto:${contact.email}`} className="text-sand-100 underline-offset-4 hover:underline">
                     {contact.email}
@@ -25,7 +26,7 @@ export function Footer() {
                 </dd>
               </div>
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-500">Phone</dt>
+                <dt className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold-500"><Icon name="phone" className="h-4 w-4" />Phone</dt>
                 <dd className="mt-2 flex flex-col gap-1">
                   {contact.phones.map((p) => (
                     <a key={p.tel} href={`tel:${p.tel}`} className="text-sand-100 underline-offset-4 hover:underline">

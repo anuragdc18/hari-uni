@@ -62,7 +62,10 @@
 @layer base {
   :root {
     color-scheme: light;
-    --header-height: 5rem;
+    --header-height: 4.5rem;
+  }
+  @media (min-width: 64rem) {
+    :root { --header-height: 7.25rem; }
   }
 
   html {

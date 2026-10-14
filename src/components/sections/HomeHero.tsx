@@ -71,7 +71,7 @@ export function HomeHero() {
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-t from-ink-950/95 via-ink-950/35 to-ink-950/20" />
       <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-ink-950/50 to-transparent" />
 
-      <div className="container-x relative pb-16 pt-40 lg:pb-24">
+      <div className="container-x relative pb-28 pt-40 lg:pb-36">
         <motion.p
           initial={reduce ? false : { opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

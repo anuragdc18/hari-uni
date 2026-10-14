@@ -8,6 +8,7 @@ import type { EventItem } from "@/content/events";
 import type { NewsPost } from "@/content/news";
 import { formatCitation, type Publication } from "@/content/publications";
 import { cn } from "@/lib/utils";
+import { Icon } from "@/components/ui/Icon";
 
 /* ---------- Programme ---------- */
 export function ProgramCard({ program, index, image }: { program: Program; index?: number; image?: ImageKey }) {
@@ -27,8 +28,8 @@ export function ProgramCard({ program, index, image }: { program: Program; index
         <h3 className="mt-3 font-display text-xl leading-snug text-ink-950 group-hover:text-terracotta-700 lg:text-[1.35rem]">{program.name}</h3>
         <p className="mt-3 flex-1 text-sm leading-relaxed text-stone-500">{program.summary}</p>
         <div className="mt-5 flex items-center justify-between border-t border-sand-200 pt-4 text-sm">
-          <span className="text-stone-500">
-            {program.duration} · {program.status}
+          <span className="flex items-center gap-1.5 text-stone-500">
+            <Icon name="clock" className="h-4 w-4" />{program.duration} · {program.status}
           </span>
           <span className="link-arrow text-sm">
             Explore <ArrowIcon />

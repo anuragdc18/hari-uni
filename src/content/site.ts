@@ -73,7 +73,7 @@ export const externalLinks = {
   daaji: "https://daaji.org",
 } as const;
 
-export type NavLink = { label: string; href: string; description?: string; external?: boolean };
+export type NavLink = { label: string; href: string; description?: string; external?: boolean; icon?: string };
 export type NavGroup = {
   label: string;
   href: string;
@@ -89,10 +89,10 @@ export const navigation: NavGroup[] = [
     href: "/about",
     intro: "India's first greenfield, privately sponsored deemed-to-be university under UGC's Distinct Category.",
     links: [
-      { label: "About HARI", href: "/about", description: "Our story, campus and recognition" },
-      { label: "Daaji's Vision", href: "/daajis-vision", description: "A message from the founder" },
-      { label: "Management", href: "/management", description: "University leadership" },
-      { label: "Press", href: "/blog", description: "News, milestones and media coverage" },
+      { label: "About HARI", icon: "university", href: "/about", description: "Our story, campus and recognition" },
+      { label: "Daaji's Vision", icon: "eye", href: "/daajis-vision", description: "A message from the founder" },
+      { label: "Management", icon: "users", href: "/management", description: "University leadership" },
+      { label: "Press", icon: "news", href: "/blog", description: "News, milestones and media coverage" },
     ],
     feature: { eyebrow: "Founder", title: "The heart is the laboratory. The human being is the experiment.", href: "/daajis-vision" },
   },
@@ -101,10 +101,10 @@ export const navigation: NavGroup[] = [
     href: "/academics",
     intro: "Four schools, eight programmes, one living campus.",
     links: [
-      { label: "Schools", href: "/academics", description: "Agriculture, Engineering, Management, Philosophy" },
-      { label: "Faculties", href: "/academics/faculty-list", description: "Faculty and guest faculty" },
-      { label: "Orientation Program", href: "/events/orientation-program", description: "Orientation Day 2026" },
-      { label: "Programmes", href: "/programs", description: "Undergraduate and postgraduate degrees" },
+      { label: "Schools", icon: "school", href: "/academics", description: "Agriculture, Engineering, Management, Philosophy" },
+      { label: "Faculties", icon: "faculty", href: "/academics/faculty-list", description: "Faculty and guest faculty" },
+      { label: "Orientation Program", icon: "calendar", href: "/events/orientation-program", description: "Orientation Day 2026" },
+      { label: "Programmes", icon: "book", href: "/programs", description: "Undergraduate and postgraduate degrees" },
     ],
     feature: { eyebrow: "Admissions AY 2026-27", title: "Explore all eight programmes", href: "/programs" },
   },
@@ -113,8 +113,8 @@ export const navigation: NavGroup[] = [
     href: "/research",
     intro: "From practice to proof — 75 years of evidence, now in a university.",
     links: [
-      { label: "Research Overview", href: "/research", description: "Four research centres" },
-      { label: "Research Publications", href: "/research/publications", description: "21 selected peer-reviewed studies" },
+      { label: "Research Overview", icon: "flask", href: "/research", description: "Four research centres" },
+      { label: "Research Publications", icon: "doc", href: "/research/publications", description: "21 selected peer-reviewed studies" },
     ],
     feature: { eyebrow: "Research", title: "Partner with us on the science of well-being", href: "/research" },
   },
@@ -123,9 +123,9 @@ export const navigation: NavGroup[] = [
     href: "/campus",
     intro: "Life at Kanha Shanti Vanam — a regenerated, IGBC Platinum campus near Hyderabad.",
     links: [
-      { label: "Campus Life", href: "/campus", description: "Facilities and the living laboratory" },
-      { label: "Events", href: "/events", description: "Upcoming events and activities" },
-      { label: "Bus Timetable", href: "/campus/bus-timetable", description: "Student and city bus routes" },
+      { label: "Campus Life", icon: "leaf", href: "/campus", description: "Facilities and the living laboratory" },
+      { label: "Events", icon: "calendar", href: "/events", description: "Upcoming events and activities" },
+      { label: "Bus Timetable", icon: "bus", href: "/campus/bus-timetable", description: "Student and city bus routes" },
     ],
     feature: { eyebrow: "Visit", title: "Come and see for yourself", href: "/campus" },
   },
@@ -134,13 +134,21 @@ export const navigation: NavGroup[] = [
     href: "/heartfulness",
     intro: "Ancient wisdom. Scientific evidence. No dogma. No charge.",
     links: [
-      { label: "Heartfulness at HARI", href: "/heartfulness", description: "The practice woven into campus life" },
-      { label: "About Heartfulness", href: externalLinks.heartfulness, external: true, description: "heartfulness.org" },
-      { label: "About Kanha", href: externalLinks.kanha, external: true, description: "heartfulness.org/kanha" },
-      { label: "About Daaji", href: externalLinks.daaji, external: true, description: "daaji.org" },
+      { label: "Heartfulness at HARI", icon: "heart", href: "/heartfulness", description: "The practice woven into campus life" },
+      { label: "About Heartfulness", icon: "globe", href: externalLinks.heartfulness, external: true, description: "heartfulness.org" },
+      { label: "About Kanha", icon: "map", href: externalLinks.kanha, external: true, description: "heartfulness.org/kanha" },
+      { label: "About Daaji", icon: "eye", href: externalLinks.daaji, external: true, description: "daaji.org" },
     ],
     feature: { eyebrow: "Practice", title: "Come and experience it for yourself", href: "/heartfulness" },
   },
+];
+
+/** Audience quick-links shown in the top utility bar (SFU-style audience navigation). */
+export const audienceLinks: NavLink[] = [
+  { label: "Prospective students", href: "/programs", icon: "book" },
+  { label: "Parents", href: "/events/orientation-program", icon: "users" },
+  { label: "Researchers", href: "/research", icon: "flask" },
+  { label: "Media", href: "/blog", icon: "news" },
 ];
 
 export const utilityLinks = {

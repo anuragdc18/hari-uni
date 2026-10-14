@@ -3,6 +3,7 @@ import { HomeHero } from "@/components/sections/HomeHero";
 import { SchoolsPanels, LifeTabs } from "@/components/sections/SchoolsStory";
 import { ProgramShowcase } from "@/components/sections/ProgramShowcase";
 import { OrientationPopup } from "@/components/sections/OrientationPopup";
+import { QuickActions, ProofBand, HomeNews } from "@/components/sections/HomeExtras";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { MapSection } from "@/components/sections/MapSection";
 import { EventCard } from "@/components/sections/Cards";
@@ -48,6 +49,7 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(programListJsonLd) }} />
 
       <HomeHero />
+      <QuickActions />
 
       {/* About */}
       <section className="container-x py-24 lg:py-32">
@@ -79,6 +81,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ProofBand />
 
       {/* Schools */}
       <section className="surface-dark relative overflow-hidden">
@@ -156,6 +160,8 @@ export default function HomePage() {
           })}
         </Stagger>
       </section>
+
+      <HomeNews />
 
       <CtaBand eyebrow={cta.eyebrow} title={cta.title} text={cta.text} primary={cta.primary} secondary={cta.secondary} image={cta.image} />
 

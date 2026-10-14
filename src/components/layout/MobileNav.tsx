@@ -8,6 +8,7 @@ import { navigation, utilityLinks, contact } from "@/content/site";
 import { cn, isExternal } from "@/lib/utils";
 import { Logo } from "./Logo";
 import { ArrowIcon } from "@/components/ui/Button";
+import { Icon, type IconName } from "@/components/ui/Icon";
 
 /** Full-screen mobile navigation drawer with accordion groups, focus trap and scroll lock. */
 export function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -110,12 +111,12 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
                             <li key={link.href} className="border-t border-white/5">
                               {ext ? (
                                 <a href={link.href} target="_blank" rel="noopener noreferrer" className={cls}>
-                                  {link.label}
+                                  <span className="flex items-center gap-3"><Icon name={(link.icon as IconName) ?? "arrow"} className="h-4 w-4 text-gold-500" />{link.label}</span>
                                   <span className="text-xs text-white/40">↗</span>
                                 </a>
                               ) : (
                                 <Link href={link.href} onClick={onClose} className={cls}>
-                                  {link.label}
+                                  <span className="flex items-center gap-3"><Icon name={(link.icon as IconName) ?? "arrow"} className="h-4 w-4 text-gold-500" />{link.label}</span>
                                   <ArrowIcon className="text-white/40" />
                                 </Link>
                               )}

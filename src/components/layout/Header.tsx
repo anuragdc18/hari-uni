@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useReducedMotion } from "@/lib/useReducedMotion";
-import { navigation, utilityLinks, type NavGroup } from "@/content/site";
+import { navigation, utilityLinks, audienceLinks, contact, type NavGroup } from "@/content/site";
+import { Icon, IconTile, type IconName } from "@/components/ui/Icon";
 import { cn, isExternal } from "@/lib/utils";
 import { Logo } from "./Logo";
 import { ArrowIcon } from "@/components/ui/Button";
@@ -81,6 +82,25 @@ export function Header() {
         onMouseLeave={scheduleClose}
         onMouseEnter={cancelClose}
       >
+        <div className={cn("hidden border-b text-xs transition-colors lg:block", transparent ? "border-white/15 text-white/80" : "border-sand-200 bg-ink-950 text-sand-100/85")}>
+          <div className="container-x flex h-9 items-center justify-between">
+            <ul className="flex items-center gap-5">
+              {audienceLinks.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="flex items-center gap-1.5 font-medium transition-colors hover:text-gold-500">
+                    <Icon name={l.icon as IconName} className="h-3.5 w-3.5" />
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ul className="flex items-center gap-5">
+              <li><a href={`tel:${contact.phones[0].tel}`} className="flex items-center gap-1.5 hover:text-gold-500"><Icon name="phone" className="h-3.5 w-3.5" />{contact.phones[0].display}</a></li>
+              <li><a href={`mailto:${contact.email}`} className="flex items-center gap-1.5 hover:text-gold-500"><Icon name="mail" className="h-3.5 w-3.5" />{contact.email}</a></li>
+              <li><a href={contact.whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-gold-500"><Icon name="whatsapp" className="h-3.5 w-3.5" />WhatsApp</a></li>
+            </ul>
+          </div>
+        </div>
         <div className="container-x flex h-[var(--header-height)] items-center justify-between gap-4">
           <Logo tone={tone} />
 
@@ -228,16 +248,22 @@ function MegaPanel({ group, onNavigate }: { group: NavGroup; onNavigate: () => v
               {link.description && <span className="mt-0.5 block text-sm text-stone-500">{link.description}</span>}
             </>
           );
+          const tile = (
+            <span className="flex items-start gap-3">
+              <IconTile name={(link.icon as IconName) ?? "arrow"} tone="sand" className="transition-colors group-hover:bg-terracotta-600 group-hover:text-white" />
+              <span className="min-w-0">{inner}</span>
+            </span>
+          );
           return (
             <li key={link.href}>
               {ext ? (
-                <a href={link.href} target="_blank" rel="noopener noreferrer" onClick={onNavigate} className="group block rounded-xl px-3 py-3 transition-colors hover:bg-sand-100">
-                  {inner}
+                <a href={link.href} target="_blank" rel="noopener noreferrer" onClick={onNavigate} className="group block rounded-xl border border-transparent px-3 py-3 transition-colors hover:border-sand-300 hover:bg-sand-50">
+                  {tile}
                   <span className="sr-only"> (opens in a new tab)</span>
                 </a>
               ) : (
-                <Link href={link.href} onClick={onNavigate} className="group block rounded-xl px-3 py-3 transition-colors hover:bg-sand-100">
-                  {inner}
+                <Link href={link.href} onClick={onNavigate} className="group block rounded-xl border border-transparent px-3 py-3 transition-colors hover:border-sand-300 hover:bg-sand-50">
+                  {tile}
                 </Link>
               )}
             </li>
