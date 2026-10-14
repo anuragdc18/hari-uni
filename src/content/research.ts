@@ -7,7 +7,7 @@ export const researchPage = {
   hero: {
     eyebrow: "From Practice to Proof — 75 Years of Evidence, Now in a University",
     title: "Research at HARI",
-    image: "campusAerialAvenueC" as ImageKey,
+    image: "aiResearchHero" as ImageKey,
     stats: [
       { value: "4", label: "Research centres" },
       { value: "75 yrs", label: "Of proven practice" },

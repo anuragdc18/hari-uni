@@ -25,7 +25,7 @@ export default function ProgramsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: title, path: "/programs" }])) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(listJsonLd) }} />
-      <PageHero eyebrow="Our programmes" title="HARI" intro="Eight fully residential programmes across four Schools — each one earned in a living laboratory at Kanha Shanti Vanam." image="academicBuildingBrickGlassD" imageAlt="An academic building in terracotta brick and glass at Kanha Shanti Vanam" stats={[{ value: "8", label: "Programmes" }, { value: "4", label: "Schools" }, { value: "AY 2026-27", label: "Admissions open" }]} video />
+      <PageHero eyebrow="Our programmes" title="HARI" intro="Eight fully residential programmes across four Schools — each one earned in a living laboratory at Kanha Shanti Vanam." image="aiProgramsHero" imageAlt="Aerial view of the HARI academic campus at golden hour" stats={[{ value: "8", label: "Programmes" }, { value: "4", label: "Schools" }, { value: "AY 2026-27", label: "Admissions open" }]} video />
 
       {schools.map((school) => {
         const list = programs.filter((p) => p.schoolSlug === school.slug);

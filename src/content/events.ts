@@ -33,8 +33,8 @@ export const eventsPage = {
   hero: {
     eyebrow: "Next events",
     title: "HARI",
-    image: "auditoriumGathering" as ImageKey,
-    imageAlt: "A gathering in the auditorium at a HARI University campus event",
+    image: "aiEventsHero" as ImageKey,
+    imageAlt: "An evening gathering on the HARI campus",
   },
   featuredOrientation: {
     eyebrow: "Featured event",

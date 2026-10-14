@@ -12,7 +12,7 @@ export const heartfulnessPage = {
       "A simple, practical approach to inner development — rooted in ancient practice, backed by peer-reviewed science, and offered freely to every sincere seeker.",
     primary: { label: "Explore our research", href: "/research" },
     secondary: { label: "Learn the practice", href: externalLinks.heartfulness, external: true },
-    image: "campusSunsetAerial" as ImageKey,
+    image: "aiHeartfulnessHero" as ImageKey,
   },
   what: {
     eyebrow: "The practice",

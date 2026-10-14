@@ -85,6 +85,11 @@ export default function CampusPage() {
             <div className="lg:col-span-5">
               <SectionHeading eyebrow={facilities.eyebrow} title={facilities.title} text={facilities.text} size="lg" />
               <MaskReveal className="mt-10 rounded-3xl"><Picture src={facilities.image} alt={facilities.imageAlt} ratio="aspect-[16/10]" sizes="(min-width: 1024px) 40vw, 100vw" /></MaskReveal>
+              <div className="mt-4 grid grid-cols-3 gap-4">
+                {facilities.gallery.map((g) => (
+                  <MaskReveal key={g.key} className="rounded-2xl"><Picture src={g.key} alt={g.alt} ratio="aspect-[4/3]" sizes="(min-width: 1024px) 13vw, 33vw" /></MaskReveal>
+                ))}
+              </div>
             </div>
             <Stagger className="grid gap-px overflow-hidden rounded-3xl bg-white/10 sm:grid-cols-2 lg:col-span-7" stagger={0.06}>
               {facilities.items.map((f) => (

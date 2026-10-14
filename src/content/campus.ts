@@ -28,8 +28,8 @@ export const campusPage = {
   dayInLife: {
     eyebrow: "A day in the life",
     text: "At HARI, a typical day moves between forest and farm, laboratory and library, silence and conversation. The campus does not feel like an institution. It feels like a place where something important is quietly happening — and you are part of it.",
-    image: "forestPathCanopyC" as ImageKey,
-    imageAlt: "A tree-lined avenue through the Kanha campus",
+    image: "aiCampusDayInLife" as ImageKey,
+    imageAlt: "Students cycling along a tree-canopied avenue on the HARI campus",
   },
   transformation: {
     eyebrow: "Regeneration, lived",
@@ -83,9 +83,13 @@ export const campusPage = {
     eyebrow: "Built for depth",
     title: "World-Class Facilities",
     text: "Spaces engineered for elite performance, rigorous research, and quiet restoration — all on one campus.",
-    image: "cricketStadiumAerial" as ImageKey,
-    imageAlt:
-      "Aerial view of the Shantaben International Cricket Stadium ground and sports facilities at Kanha Shanti Vanam",
+    image: "aiFacilitySportsCentre" as ImageKey,
+    imageAlt: "Indoor badminton courts at the Heartfulness International Sports Centre",
+    gallery: [
+      { key: "cricketStadiumAerial" as ImageKey, alt: "Aerial view of the Shantaben International Cricket Stadium ground and sports facilities at Kanha Shanti Vanam" },
+      { key: "aiFacilityLibrary" as ImageKey, alt: "The Central Library & Knowledge Hub" },
+      { key: "aiFacilityInnovationHub" as ImageKey, alt: "Students prototyping in the Engineering Innovation Hub" },
+    ],
     items: [
       {
         number: "01",

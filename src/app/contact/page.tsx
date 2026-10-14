@@ -20,7 +20,7 @@ export default function ContactPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: contactPage.title, path: "/contact" }])) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqJsonLd) }} />
-      <PageHero eyebrow={hero.eyebrow} title={hero.title} intro={hero.intro} image="meditationHallAerialFlag" imageAlt="Aerial view of the Kanha Shanti Vanam meditation hall complex with the Indian flag" size="md" video />
+      <PageHero eyebrow={hero.eyebrow} title={hero.title} intro={hero.intro} image="aiContactApplyBanner" imageAlt="The HARI admissions office" size="md" />
 
       <section className="container-x py-20 lg:py-28">
         <Stagger className="grid gap-5 md:grid-cols-3">

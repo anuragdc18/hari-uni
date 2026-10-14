@@ -86,10 +86,10 @@ export const homePage = {
     eyebrow: "What we stand for",
     title: "Our four pillars",
     items: [
-      { title: "Ecological Stewardship", text: "Commitment to sustainability, regeneration, and green innovation.", image: "lotusPondPavilion" as ImageKey, alt: "Kurnool campus" },
-      { title: "Consciousness & Inner Sciences", text: "Fostering holistic human development through proven inner practices.", image: "meditationHallAerialD" as ImageKey, alt: "Kurnool campus" },
-      { title: "Rigorous Innovation", text: "Advancing data-driven, peer-reviewed scientific research.", image: "saffronBulbsSprouting" as ImageKey, alt: "Kurnool campus" },
-      { title: "Global Responsibility", text: "Cultivating community-centric, scalable impact across 160+ countries.", image: "forestPathCanopyA" as ImageKey, alt: "Kurnool campus" },
+      { title: "Ecological Stewardship", text: "Commitment to sustainability, regeneration, and green innovation.", image: "aiPillarEcology" as ImageKey, alt: "Hands planting a sapling in red soil" },
+      { title: "Consciousness & Inner Sciences", text: "Fostering holistic human development through proven inner practices.", image: "aiPillarConsciousness" as ImageKey, alt: "A person meditating under a banyan tree" },
+      { title: "Rigorous Innovation", text: "Advancing data-driven, peer-reviewed scientific research.", image: "aiPillarInnovation" as ImageKey, alt: "A scientist pipetting in a plant-genetics laboratory" },
+      { title: "Global Responsibility", text: "Cultivating community-centric, scalable impact across 160+ countries.", image: "aiPillarCommunity" as ImageKey, alt: "Students seated in a circle on a campus lawn" },
     ],
   },
   events: {

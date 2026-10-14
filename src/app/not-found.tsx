@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Page not found" };
 export default function NotFound() {
   return (
     <section className="relative isolate flex min-h-[80vh] items-center overflow-hidden" data-header-tone="dark">
-      <Picture src="forestPathCanopyWide" alt="" className="absolute inset-0 -z-10" sizes="100vw" priority />
+      <Picture src="aiNotFound404" alt="" className="absolute inset-0 -z-10" sizes="100vw" priority />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink-950/90 via-ink-950/60 to-ink-950/40" aria-hidden="true" />
       <div className="container-x py-32 text-white">
         <p className="eyebrow !text-gold-500">404 — page not found</p>

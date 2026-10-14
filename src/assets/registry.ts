@@ -1,11 +1,32 @@
-// Auto-generated registry of HARI-owned photographs migrated from the legacy site.
-// Every file here is a client asset; do not replace with stock imagery.
+// Auto-generated registry of photographs used by the HARI site.
+// Files without the "ai-" prefix are HARI-owned photographs migrated from the legacy site;
+// "ai-*" files are AI-generated supplementary images supplied by HARI (Oct 2026).
 import type { StaticImageData } from "next/image";
 
 import academicBuildingBrickGlassB from "./images/academic-building-brick-glass-b.jpg";
 import academicBuildingBrickGlassC from "./images/academic-building-brick-glass-c.jpg";
 import academicBuildingBrickGlassD from "./images/academic-building-brick-glass-d.jpg";
 import academicBuildingBrickGlass from "./images/academic-building-brick-glass.jpg";
+import aiCampusDayInLife from "./images/ai-campus-day-in-life.jpg";
+import aiContactApplyBanner from "./images/ai-contact-apply-banner.jpg";
+import aiEventsHero from "./images/ai-events-hero.jpg";
+import aiFacilityInnovationHub from "./images/ai-facility-innovation-hub.jpg";
+import aiFacilityLibrary from "./images/ai-facility-library.jpg";
+import aiFacilitySportsCentre from "./images/ai-facility-sports-centre.jpg";
+import aiHeartfulnessHero from "./images/ai-heartfulness-hero.jpg";
+import aiNotFound404 from "./images/ai-not-found-404.jpg";
+import aiPillarCommunity from "./images/ai-pillar-community.jpg";
+import aiPillarConsciousness from "./images/ai-pillar-consciousness.jpg";
+import aiPillarEcology from "./images/ai-pillar-ecology.jpg";
+import aiPillarInnovation from "./images/ai-pillar-innovation.jpg";
+import aiProgramBba from "./images/ai-program-bba.jpg";
+import aiProgramBtechAi from "./images/ai-program-btech-ai.jpg";
+import aiProgramBtechCs from "./images/ai-program-btech-cs.jpg";
+import aiProgramBtechCyberSecurity from "./images/ai-program-btech-cyber-security.jpg";
+import aiProgramBtechDataScience from "./images/ai-program-btech-data-science.jpg";
+import aiProgramMaPhilosophy from "./images/ai-program-ma-philosophy.jpg";
+import aiProgramsHero from "./images/ai-programs-hero.jpg";
+import aiResearchHero from "./images/ai-research-hero.jpg";
 import auditoriumGatheringB from "./images/auditorium-gathering-b.jpg";
 import auditoriumGatheringC from "./images/auditorium-gathering-c.jpg";
 import auditoriumGatheringD from "./images/auditorium-gathering-d.jpg";
@@ -110,6 +131,26 @@ export const img = {
   academicBuildingBrickGlassC,
   academicBuildingBrickGlassD,
   academicBuildingBrickGlass,
+  aiCampusDayInLife,
+  aiContactApplyBanner,
+  aiEventsHero,
+  aiFacilityInnovationHub,
+  aiFacilityLibrary,
+  aiFacilitySportsCentre,
+  aiHeartfulnessHero,
+  aiNotFound404,
+  aiPillarCommunity,
+  aiPillarConsciousness,
+  aiPillarEcology,
+  aiPillarInnovation,
+  aiProgramBba,
+  aiProgramBtechAi,
+  aiProgramBtechCs,
+  aiProgramBtechCyberSecurity,
+  aiProgramBtechDataScience,
+  aiProgramMaPhilosophy,
+  aiProgramsHero,
+  aiResearchHero,
   auditoriumGatheringB,
   auditoriumGatheringC,
   auditoriumGatheringD,

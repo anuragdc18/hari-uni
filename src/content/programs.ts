@@ -77,7 +77,7 @@ export const programs: Program[] = [
     overview: [
       "A rigorous foundation in software engineering, systems design, and computational thinking — with a Heartfulness-informed emphasis on building technology that is purposeful, inclusive, and responsible.",
     ],
-    image: "studentsMicroscopesLab",
+    image: "aiProgramBtechCs",
     featuredOnHome: true,
   },
   {
@@ -95,7 +95,7 @@ export const programs: Program[] = [
     overview: [
       "Ethical AI design, machine learning, and deep learning — informed by HARI's own AI research in agriculture, ecological monitoring, and consciousness science. Students work on live interdisciplinary projects from Day 1.",
     ],
-    image: "studentsDroneSmartFarm",
+    image: "aiProgramBtechAi",
     featuredOnHome: true,
   },
   {
@@ -113,7 +113,7 @@ export const programs: Program[] = [
     overview: [
       "Statistical modelling, data engineering, and applied analytics — with hands-on datasets drawn from HARI's living campus: soil health, crop yields, biodiversity indices, and human performance metrics.",
     ],
-    image: "studentTabletTreeSensor",
+    image: "aiProgramBtechDataScience",
     featuredOnHome: true,
   },
   {
@@ -131,7 +131,7 @@ export const programs: Program[] = [
     overview: [
       "Network security, ethical hacking, cryptography, and digital governance — grounded in a curriculum that takes seriously the social and ethical responsibility of those who protect the world's information systems.",
     ],
-    image: "studentsMicroscopesLabC",
+    image: "aiProgramBtechCyberSecurity",
     featuredOnHome: false,
   },
   {
@@ -149,7 +149,7 @@ export const programs: Program[] = [
     overview: [
       "A contemporary undergraduate management programme where business fundamentals — finance, marketing, operations, strategy — are taught alongside the Heartfulness leadership model: conscious capitalism, stakeholder value, ESG leadership, and decision-making from a place of clarity and integrity.",
     ],
-    image: "auditoriumGatheringD",
+    image: "aiProgramBba",
     featuredOnHome: false,
   },
   {
@@ -167,7 +167,7 @@ export const programs: Program[] = [
     overview: [
       "An interdisciplinary postgraduate programme that draws from Indian philosophical traditions, Western analytical philosophy, consciousness studies, ethics, and the science of the inner world. Students engage with living philosophical questions — not merely historical ones — and are encouraged to bring their insights into dialogue with the scientific and technological research happening across the HARI campus.",
     ],
-    image: "philosophyReadingStudent",
+    image: "aiProgramMaPhilosophy",
     featuredOnHome: false,
   },
 ];

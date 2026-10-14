@@ -89,7 +89,7 @@ export const applyPage = {
     title: "Apply to HARI",
     intro:
       "Begin your application to study at Kanha Shanti Vanam. The form takes a few minutes — your progress is saved automatically, so you can step away and return at any time. Our admissions team will be in touch once you submit.",
-    image: "campusAerialAvenuePalms" as ImageKey,
+    image: "aiContactApplyBanner" as ImageKey,
   },
   form: {
     eyebrow: "Admissions form",
