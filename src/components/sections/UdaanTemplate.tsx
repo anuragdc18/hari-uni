@@ -19,14 +19,14 @@ const tierTone = { Gold: "border-gold-500 bg-gold-200/40", Silver: "border-stone
 export function UdaanTemplate({ crumbs }: { crumbs: Crumb[] }) {
   return (
     <>
-      <PageHero variant="editorial" eyebrow={u.hero.eyebrow} title={u.hero.title} intro={u.hero.subtitle} crumbs={crumbs}>
+      <PageHero eyebrow={u.hero.eyebrow} title={u.hero.title} intro={u.hero.subtitle} crumbs={crumbs} image="auditoriumGatheringE" imageAlt="A gathering in the campus auditorium at Kanha Shanti Vanam" size="md">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <p className="max-w-xl text-stone-700">{u.hero.text}</p>
-            <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 font-display text-xl text-ink-950"><span>{u.hero.date} · {u.hero.day}</span><span>{u.hero.venue}</span></div>
+            <p className="max-w-xl text-sand-100/85">{u.hero.text}</p>
+            <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 font-display text-xl text-white"><span>{u.hero.date} · {u.hero.day}</span><span>{u.hero.venue}</span></div>
             <div className="mt-8 flex flex-wrap gap-4">
-              <ButtonLink href={u.hero.primary.href} variant="ink">{u.hero.primary.label}</ButtonLink>
-              <ButtonLink href={u.venueMapSearch} variant="outline" external>{u.hero.secondary.label}</ButtonLink>
+              <ButtonLink href={u.hero.primary.href}>{u.hero.primary.label}</ButtonLink>
+              <ButtonLink href={u.venueMapSearch} variant="outline-light" external>{u.hero.secondary.label}</ButtonLink>
             </div>
           </div>
           <MaskReveal className="rounded-3xl lg:col-span-5"><Picture src={u.hero.poster} alt={u.hero.posterAlt} ratio="aspect-[4/5]" sizes="(min-width: 1024px) 35vw, 100vw" priority /></MaskReveal>

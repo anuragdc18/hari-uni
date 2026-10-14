@@ -25,6 +25,7 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const closeTimer = useRef<number | null>(null);
   const navRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
 
   useEffect(() => {
@@ -48,7 +49,7 @@ export function Header() {
       if (e.key === "Escape") setOpen(null);
     };
     const onClick = (e: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) setOpen(null);
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) setOpen(null);
     };
     document.addEventListener("keydown", onKey);
     document.addEventListener("pointerdown", onClick);
@@ -75,6 +76,7 @@ export function Header() {
         Skip to main content
       </a>
       <header
+        ref={headerRef}
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500",
           transparent ? "bg-transparent" : "bg-white/90 shadow-[0_1px_0_rgba(8,25,42,0.06)] backdrop-blur-xl",

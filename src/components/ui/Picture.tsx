@@ -40,7 +40,7 @@ export function Picture({ src, alt, className, imgClassName, sizes = "(min-width
     );
   }
   return (
-    <div className={cn("relative overflow-hidden", ratio, className)}>
+    <div className={cn(/\babsolute\b|\bfixed\b/.test(className ?? "") ? "overflow-hidden" : "relative overflow-hidden", ratio, className)}>
       <Image
         src={data}
         alt={alt}

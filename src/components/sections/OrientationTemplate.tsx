@@ -17,15 +17,15 @@ const busCols = ["Time", "From", "To", "Route", "Boarding Location"];
 export function OrientationTemplate({ crumbs }: { crumbs: Crumb[] }) {
   return (
     <>
-      <PageHero variant="editorial" eyebrow={o.hero.eyebrow} title={o.hero.title} intro={o.hero.intro} crumbs={crumbs}>
+      <PageHero eyebrow={o.hero.eyebrow} title={o.hero.title} intro={o.hero.intro} crumbs={crumbs} image="studentsBlazersWalking" imageAlt="HARI students in blazers walking together along a campus path" size="md">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <div className="flex flex-wrap gap-4">
-              <ButtonLink href={o.hero.primary.href} variant="ink">{o.hero.primary.label}</ButtonLink>
-              <ButtonLink href={o.hero.secondary.href} variant="outline" arrow={false}>{o.hero.secondary.label}</ButtonLink>
-              <ButtonLink href={o.hero.invitationPdf} variant="outline" download arrow={false}>{o.hero.invitationLabel}</ButtonLink>
+              <ButtonLink href={o.hero.primary.href}>{o.hero.primary.label}</ButtonLink>
+              <ButtonLink href={o.hero.secondary.href} variant="outline-light" arrow={false}>{o.hero.secondary.label}</ButtonLink>
+              <ButtonLink href={o.hero.invitationPdf} variant="outline-light" download arrow={false}>{o.hero.invitationLabel}</ButtonLink>
             </div>
-            <StatGrid stats={o.facts} className="mt-10" compact />
+            <StatGrid stats={o.facts} tone="dark" className="mt-10" compact />
           </div>
           <MaskReveal className="rounded-3xl lg:col-span-5">
             <Picture src={o.hero.poster} alt={o.hero.posterAlt} ratio="aspect-[2/3]" sizes="(min-width: 1024px) 35vw, 100vw" priority />

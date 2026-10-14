@@ -12,7 +12,8 @@ export function Counter({ value, className, duration = 1.6 }: { value: string; c
   const reduce = useReducedMotion();
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-10% 0px" });
-  const match = value.match(/^([^\d]*)([\d,]+(?:\.\d+)?)(.*)$/);
+  const isDate = /\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\b/i.test(value) || /\b(19|20)\d{2}\b/.test(value);
+  const match = isDate ? null : value.match(/^([^\d]*)([\d,]+(?:\.\d+)?)(.*)$/);
   const [display, setDisplay] = useState(value);
 
   useEffect(() => {
