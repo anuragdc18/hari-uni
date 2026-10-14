@@ -162,36 +162,40 @@ export function Header() {
 
 function MegaItem({ group, tone, isOpen, active, onOpen, onToggle, onClose }: { group: NavGroup; tone: "light" | "dark"; isOpen: boolean; active: boolean; onOpen: () => void; onToggle: () => void; onClose: () => void }) {
   const id = useId();
+  const color = cn(tone === "light" ? "text-white/90 hover:text-white" : "text-stone-700 hover:text-ink-900", (isOpen || active) && (tone === "light" ? "text-white" : "text-ink-900"));
   return (
-    <li onMouseEnter={onOpen} className="relative">
+    <li onMouseEnter={onOpen} className="relative flex items-center">
+      {/* One click/tap on the label navigates; hovering or focusing opens the panel. */}
+      <Link
+        href={group.href}
+        onFocus={onOpen}
+        onKeyDown={(e) => {
+          if (e.key === "Escape") onClose();
+        }}
+        className={cn("relative rounded-full py-2 pl-3.5 pr-1 text-[0.9375rem] font-medium transition-colors", color)}
+      >
+        {group.label}
+        <span className={cn("absolute inset-x-3.5 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full transition-transform duration-300", tone === "light" ? "bg-gold-500" : "bg-terracotta-500", (isOpen || active) && "scale-x-100")} aria-hidden="true" />
+      </Link>
       <button
         type="button"
         aria-expanded={isOpen}
         aria-controls={`mega-${id}`}
-        aria-haspopup="true"
+        aria-label={`${isOpen ? "Close" : "Open"} ${group.label} menu`}
         onClick={onToggle}
         onKeyDown={(e) => {
           if (e.key === "ArrowDown") {
             e.preventDefault();
             onOpen();
-            window.setTimeout(() => {
-              const first = document.querySelector<HTMLAnchorElement>(`#mega-panel-links a`);
-              first?.focus();
-            }, 50);
+            window.setTimeout(() => document.querySelector<HTMLAnchorElement>("#mega-panel-links a")?.focus(), 50);
           }
           if (e.key === "Escape") onClose();
         }}
-        className={cn(
-          "group relative flex items-center gap-1.5 rounded-full px-3.5 py-2 text-[0.9375rem] font-medium transition-colors",
-          tone === "light" ? "text-white/90 hover:text-white" : "text-stone-700 hover:text-ink-900",
-          (isOpen || active) && (tone === "light" ? "text-white" : "text-ink-900"),
-        )}
+        className={cn("flex h-8 w-6 items-center justify-center rounded-full transition-colors", color)}
       >
-        {group.label}
         <svg viewBox="0 0 12 12" className={cn("h-3 w-3 transition-transform duration-300", isOpen && "rotate-180")} fill="none" aria-hidden="true">
           <path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-        <span className={cn("absolute inset-x-3.5 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full transition-transform duration-300", tone === "light" ? "bg-gold-500" : "bg-terracotta-500", (isOpen || active) && "scale-x-100")} aria-hidden="true" />
       </button>
       <span id={`mega-${id}`} className="sr-only" />
     </li>
