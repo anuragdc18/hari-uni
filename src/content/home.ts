@@ -11,7 +11,7 @@ export const homePage = {
     secondary: { label: "Explore programmes", href: "/programs" },
     poster: "meditationHallAerialHero" as ImageKey,
     posterAlt: "Aerial view of the lotus-petal meditation halls at Kurnool",
-    video: { mp4: "/videos/hero-720.mp4", mp4Small: "/videos/hero-480.mp4", poster: "/videos/hero-poster.jpg" },
+    video: { mp4: "/videos/hero-720.mp4", poster: "/videos/hero-poster.jpg" },
   },
   about: {
     eyebrow: "Where consciousness meets research",

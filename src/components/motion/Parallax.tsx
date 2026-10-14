@@ -3,6 +3,7 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { cn } from "@/lib/utils";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -64,7 +65,7 @@ export function MaskReveal({ children, className, direction = "up" }: { children
   }, [direction]);
 
   return (
-    <div ref={ref} className={className} style={{ clipPath: "inset(0 0 0 0)" }}>
+    <div ref={ref} className={cn("overflow-hidden", className)} style={{ clipPath: "inset(0 0 0 0)" }}>
       <div ref={media} className="h-full w-full" style={{ willChange: "transform" }}>
         {children}
       </div>

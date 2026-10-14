@@ -50,10 +50,10 @@ export function OrientationPopup() {
           animate={{ opacity: 1, y: 0 }}
           exit={reduce ? undefined : { opacity: 0, y: 24 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed bottom-20 left-4 right-4 z-40 overflow-hidden rounded-2xl border border-sand-300 bg-white shadow-lift sm:left-auto sm:right-6 sm:w-[26rem] lg:bottom-24 lg:right-8"
+          className="fixed bottom-20 left-3 right-16 z-40 overflow-hidden rounded-2xl border border-sand-300 bg-white shadow-lift sm:left-auto sm:right-6 sm:w-[26rem] lg:bottom-24 lg:right-8"
         >
           <div className="flex gap-4 p-4">
-            <Picture src={data.image} alt={data.imageAlt} className="w-24 shrink-0 rounded-lg" ratio="aspect-[2/3]" sizes="96px" />
+            <Picture src={data.image} alt={data.imageAlt} className="hidden w-24 shrink-0 rounded-lg sm:block" ratio="aspect-[2/3]" sizes="96px" />
             <div className="min-w-0 flex-1">
               <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-terracotta-600">{data.eyebrow}</p>
               <h2 id="orientation-popup-title" className="mt-1 font-display text-xl leading-tight">

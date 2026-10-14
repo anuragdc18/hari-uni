@@ -62,8 +62,7 @@ export function HomeHero() {
             aria-hidden="true"
             tabIndex={-1}
           >
-            <source src={hero.video.mp4} type="video/mp4" media="(min-width: 768px)" />
-            <source src={hero.video.mp4Small} type="video/mp4" />
+            <source src={hero.video.mp4} type="video/mp4" />
           </video>
         )}
       </motion.div>

@@ -84,7 +84,7 @@ export function Header() {
         onMouseLeave={scheduleClose}
         onMouseEnter={cancelClose}
       >
-        <div className={cn("hidden border-b text-xs transition-colors lg:block", transparent ? "border-white/15 text-white/80" : "border-sand-200 bg-ink-950 text-sand-100/85")}>
+        <div className={cn("hidden border-b text-xs transition-colors xl:block", transparent ? "border-white/15 text-white/80" : "border-sand-200 bg-ink-950 text-sand-100/85")}>
           <div className="container-x flex h-9 items-center justify-between">
             <ul className="flex items-center gap-5">
               {audienceLinks.map((l) => (
@@ -106,7 +106,7 @@ export function Header() {
         <div className="container-x flex h-[var(--header-height)] items-center justify-between gap-4">
           <Logo tone={tone} />
 
-          <nav ref={navRef} aria-label="Primary" className="hidden items-center gap-1 lg:flex">
+          <nav ref={navRef} aria-label="Primary" className="hidden items-center gap-0.5 xl:flex">
             <ul className="flex items-center gap-1">
               {navigation.map((group) => (
                 <MegaItem
@@ -124,10 +124,10 @@ export function Header() {
                 />
               ))}
             </ul>
-            <div className="ml-4 flex items-center gap-3 border-l border-current/15 pl-5">
+            <div className="ml-3 flex items-center gap-3 border-l border-current/15 pl-4">
               <Link
                 href={utilityLinks.contact.href}
-                className={cn("text-sm font-semibold transition-colors", tone === "light" ? "text-white/85 hover:text-white" : "text-stone-700 hover:text-ink-900")}
+                className={cn("whitespace-nowrap text-sm font-semibold transition-colors", tone === "light" ? "text-white/85 hover:text-white" : "text-stone-700 hover:text-ink-900")}
               >
                 {utilityLinks.contact.label}
               </Link>
@@ -138,7 +138,7 @@ export function Header() {
             </div>
           </nav>
 
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-2 xl:hidden">
             <Link href={utilityLinks.apply.href} className="btn btn-primary !min-h-10 !px-4 text-xs sm:text-sm" aria-label="Apply Now">
               Apply
             </Link>
@@ -168,7 +168,7 @@ export function Header() {
               animate={{ opacity: 1, y: 0 }}
               exit={reduce ? undefined : { opacity: 0, y: -6, transition: { duration: 0.18 } }}
               transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute inset-x-0 top-full hidden border-t border-sand-200 bg-white/95 shadow-[0_30px_60px_-30px_rgba(8,25,42,0.35)] backdrop-blur-xl lg:block"
+              className="absolute inset-x-0 top-full hidden border-t border-sand-200 bg-white/95 shadow-[0_30px_60px_-30px_rgba(8,25,42,0.35)] backdrop-blur-xl xl:block"
               onMouseEnter={cancelClose}
             >
               <MegaPanel group={navigation.find((g) => g.label === open)!} onNavigate={() => setOpen(null)} />
@@ -194,7 +194,7 @@ function MegaItem({ group, tone, isOpen, active, onOpen, onToggle, onClose }: { 
         onKeyDown={(e) => {
           if (e.key === "Escape") onClose();
         }}
-        className={cn("relative rounded-full py-2 pl-3.5 pr-1 text-[0.9375rem] font-medium transition-colors", color)}
+        className={cn("relative rounded-full py-2 pl-3 pr-1 text-[0.875rem] font-medium transition-colors", color)}
       >
         {group.label}
         <span className={cn("absolute inset-x-3.5 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full transition-transform duration-300", tone === "light" ? "bg-gold-500" : "bg-terracotta-500", (isOpen || active) && "scale-x-100")} aria-hidden="true" />

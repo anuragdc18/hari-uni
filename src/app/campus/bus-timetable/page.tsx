@@ -34,9 +34,9 @@ export default function BusTimetablePage() {
                 <h3 className="mt-2 font-display text-2xl">{r.name}</h3>
                 <p className="mt-1 text-sm text-stone-500">{r.intro}</p>
               </div>
-              <ol className="grid grid-cols-2 gap-x-6 p-6 sm:grid-cols-3">
+              <ol className="grid grid-cols-1 gap-x-6 p-6 sm:grid-cols-2 xl:grid-cols-3">
                 {r.stops.map((s, i) => (
-                  <li key={s} className="flex gap-3 border-b border-sand-200 py-2 text-sm">
+                  <li key={s} className="flex gap-3 border-b border-sand-200 py-2 text-sm break-words">
                     <span className="w-5 tabular-nums text-stone-400">{i + 1}</span>
                     <span className={i === r.stops.length - 1 ? "font-semibold text-terracotta-700" : "text-stone-700"}>{s}</span>
                   </li>

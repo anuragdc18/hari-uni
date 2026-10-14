@@ -58,7 +58,7 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
           animate={{ opacity: 1 }}
           exit={reduce ? undefined : { opacity: 0 }}
           transition={{ duration: 0.25 }}
-          className="fixed inset-0 z-[60] flex flex-col bg-ink-950 text-white lg:hidden"
+          className="fixed inset-0 z-[60] flex flex-col bg-ink-950 text-white xl:hidden"
         >
           <div className="container-x flex h-[var(--header-height)] items-center justify-between">
             <Logo tone="light" compact />

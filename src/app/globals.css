@@ -64,11 +64,12 @@
     color-scheme: light;
     --header-height: 4.5rem;
   }
-  @media (min-width: 64rem) {
+  @media (min-width: 80rem) {
     :root { --header-height: 7.25rem; }
   }
 
   html {
+    overflow-x: clip;
     scroll-padding-top: calc(var(--header-height) + 1rem);
     -webkit-text-size-adjust: 100%;
   }

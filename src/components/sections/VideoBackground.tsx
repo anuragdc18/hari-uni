@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "@/lib/useReducedMotion";
 
-const SRC = { mp4: "/videos/hero-720.mp4", mp4Small: "/videos/hero-480.mp4", poster: "/videos/hero-poster.jpg" };
+const SRC = { mp4: "/videos/hero-720.mp4", poster: "/videos/hero-poster.jpg" };
 
 /**
  * The HARI aerial hero video, fading in over a poster/photo. Skipped for reduced-motion
@@ -49,8 +49,7 @@ export function VideoBackground({ className = "" }: { className?: string }) {
       aria-hidden="true"
       tabIndex={-1}
     >
-      <source src={SRC.mp4} type="video/mp4" media="(min-width: 768px)" />
-      <source src={SRC.mp4Small} type="video/mp4" />
+      <source src={SRC.mp4} type="video/mp4" />
     </video>
   );
 }
